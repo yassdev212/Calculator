@@ -1,0 +1,9 @@
+.icon {
+    width: 24px;
+    height: 24px;
+    fill: #65676b;
+}
+
+.nav-item.active .icon {
+    fill: #1877f2;
+}

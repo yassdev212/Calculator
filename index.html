@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Feed Clone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Include SVG sprite sheet -->
+    <object id="svg-icons" type="image/svg+xml" data="images/icons.svg" style="display: none;"></object>
+<body>
+    <header class="header">
+        <div class="header-left">
+            <h1>facebook</h1>
+            <input type="text" placeholder="Search Facebook" class="search-input">
+        </div>
+        <nav class="header-center">
+            <a href="#" class="nav-item active">
+                <svg class="icon"><use href="#home-icon"/></svg>
+            </a>
+            <a href="#" class="nav-item">
+                <svg class="icon"><use href="#friends-icon"/></svg>
+            </a>
+            <a href="#" class="nav-item">
+                <svg class="icon"><use href="#watch-icon"/></svg>
+            </a>
+            <a href="#" class="nav-item">
+                <svg class="icon"><use href="#marketplace-icon"/></svg>
+            </a>
+            <a href="#" class="nav-item">
+                <svg class="icon"><use href="#groups-icon"/></svg>
+            </a>
+        </nav>
+        <div class="header-right">
+            <div class="profile">
+                <img src="images/profile.svg" alt="Profile" class="profile-img">
+                <span>John Doe</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <aside class="sidebar">
+            <div class="sidebar-item">
+                <img src="images/profile.svg" alt="Profile" class="profile-img">
+                <span>John Doe</span>
+            </div>
+            <div class="sidebar-item">
+                <svg class="icon"><use href="#friends-icon"/></svg>
+                <span>Friends</span>
+            </div>
+            <div class="sidebar-item">
+                <svg class="icon"><use href="#groups-icon"/></svg>
+                <span>Groups</span>
+            </div>
+            <div class="sidebar-item">
+                <svg class="icon"><use href="#marketplace-icon"/></svg>
+                <span>Marketplace</span>
+            </div>
+            <div class="sidebar-item">
+                <svg class="icon"><use href="#watch-icon"/></svg>
+                <span>Watch</span>
+            </div>
+        </aside>
+
+        <section class="feed">
+            <div class="create-post">
+                <img src="images/profile.svg" alt="Profile" class="profile-img">
+                <div class="post-input-container">
+                    <input type="text" placeholder="What's on your mind, John?" class="post-input">
+                    <div class="post-actions-row">
+                        <label class="image-upload-btn">
+                            <svg class="icon"><use href="#photo-icon"/></svg>
+                            <span>Photo/Video</span>
+                            <input type="file" accept="image/*" id="image-upload" style="display: none;">
+                        </label>
+                        <div id="image-preview-container" style="display: none;">
+                            <img id="image-preview" src="" alt="Preview">
+                            <button class="remove-image-btn" onclick="removeImagePreview()">×</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="posts-container">
+                <!-- Sample Post -->
+                <div class="post">
+                    <div class="post-header">
+                        <img src="images/profile.svg" alt="Profile" class="profile-img">
+                        <div>
+                            <strong>John Doe</strong>
+                            <div style="color: #65676b; font-size: 0.9em;">Just now</div>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <p>Check out this amazing view!</p>
+                        <img src="images/sample-post.svg" alt="Sample post" class="post-image">
+                    </div>
+                    <div class="post-actions">
+                        <button class="action-button">
+                            <svg class="icon"><use href="#like-icon"/></svg>
+                            Like
+                        </button>
+                        <button class="action-button">
+                            <svg class="icon"><use href="#comment-icon"/></svg>
+                            Comment
+                        </button>
+                        <button class="action-button">
+                            <svg class="icon"><use href="#share-icon"/></svg>
+                            Share
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
